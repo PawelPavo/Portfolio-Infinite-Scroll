@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { ThemeProvider } from 'styled-components'
 import { GlobalStyles } from './utils/global'
-import { BsArrowBarDown, BsArrowBarUp } from 'react-icons/bs'
 import { theme } from './utils/theme';
 import HomeView from './components/HomeView';
 import ContactView from './components/ContactView';
@@ -11,7 +10,6 @@ import Burger from './components/navBarMobile/Burger/Burger';
 import { useOnClickOutside } from './utils/hooks';
 import Menu from './components/navBarMobile/Menu/Menu';
 
-const Slide = require('react-reveal/Slide')
 
 const App = (props: AppProps) => {
 	const [open, setOpen] = React.useState<boolean>(false)
@@ -29,15 +27,10 @@ const App = (props: AppProps) => {
 				<div className="mobile">
 					<NavBar />
 				</div>
-				<Slide bottom>
 					<HomeView />
-				</Slide>
-				<Slide bottom>
 					<BioView />
-				</Slide>
-				<Slide bottom>
 					<ContactView />
-				</Slide>
+				
 			</>
 			<div className='ripple-background mobile'>
 				<div className='circle xxlarge shade1'></div>

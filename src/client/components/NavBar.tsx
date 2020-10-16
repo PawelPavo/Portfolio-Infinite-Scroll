@@ -1,26 +1,37 @@
 import * as React from 'react';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FiMail, FiGithub } from 'react-icons/fi';
+import {useSpring, animated} from 'react-spring'
 import styled from 'styled-components';
 const Flip = require('react-reveal/Flip')
 
 
+
 const NavBar: React.FC<INavBarProps> = (props) => {
+    const myArray = ["你好世界", "Hallo wereld", "Bonjour monde", "Hallo Welt", "γειά σου κόσμος", "Ciao mondo", "こんにちは世界", "여보세요 세계", "Olá mundo", "Здравствуй, мир", "Hola mundo", "Witaj Swiecie"];
 
-    const [navText, setNavText] = React.useState<string>('Home')
-
+    const [navText, setNavText] = React.useState<string>('Hello World')
     const handleClick = (event: any) => {
-        setNavText(event.currentTarget.textContent)
+        const newText = myArray[Math.floor(Math.random() * myArray.length)];
+        setNavText(newText)
     }
+
+    React.useEffect(() => {
+        const interval = setInterval(() => {
+            const newText = myArray[Math.floor(Math.random() * myArray.length)];
+            setNavText(newText)
+        }, 5000);
+        return () => clearInterval(interval);
+    }, []);
 
     return (
         <>
             <div id="navbar" className="row fixed-top">
-                <Flip top>
-                    <div className="display-4 col-6 text-right my-auto mobile text-navBigText">
-
-                    </div>
-                </Flip>
+                <div className="display-4 col-6 text-right my-auto mobile text-navText font-weight-lighter fade-in">
+                    <Flip top>
+                        {navText}
+                    </Flip>
+                </div>
                 <div className="col-4 border border-top-0 border-right-0 border-bottom-0 text-left border border-accent">
                     <div className="m-3">
                         <a href="#home">
@@ -85,7 +96,7 @@ text{
 }
 
 text:hover {
-    stroke          : #9c3725;
+    fill            : #182F53;
 }
   
 @keyframes pulsate {
