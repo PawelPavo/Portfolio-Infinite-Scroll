@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FiMail, FiGithub } from 'react-icons/fi';
-import {useSpring, animated} from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components';
 const Flip = require('react-reveal/Flip')
 
@@ -63,19 +63,19 @@ const NavBar: React.FC<INavBarProps> = (props) => {
                         </a>
                     </div>
                 </div>
-                <div className="col-1 text-navText my-auto">
-                    <div className="m-3">
-                        <a href="mailto:pjpavo@gmail.com" target="_blank">
-                            <p style={{ textDecoration: "none" }} className="text-navText"> <FiMail /></p>
-                        </a>
-                        <a href="https://github.com/PawelPavo" target="_blank">
-                            <p style={{ textDecoration: "none" }} className="text-navText"> <FiGithub /></p>
-                        </a>
-                        <a href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/" target="_blank">
-                            <p style={{ textDecoration: "none" }} className="text-navText"> <AiFillLinkedin /></p>
-                        </a>
+                    <div className="col-1 text-navText my-auto">
+                        <div className="m-5">
+                            <a href="mailto:pjpavo@gmail.com" target="_blank">
+                                <h4 className="text-accent "> <FiMail /></h4>
+                            </a>
+                            <a href="https://github.com/PawelPavo" target="_blank">
+                                <h4 className="text-accent my-3"> <FiGithub /></h4>
+                            </a>
+                            <a href="https://www.linkedin.com/in/pawel-jaskolski-995323b3/" target="_blank">
+                                <h4 className="text-accent "> <AiFillLinkedin /></h4>
+                            </a>
+                        </div>
                     </div>
-                </div>
             </div>
         </>
     )
@@ -98,11 +98,12 @@ text{
 text:hover {
     fill            : #182F53;
 }
-  
+
+
+
 @keyframes pulsate {
     50%{ stroke-width:5px }
 }
-
 `
 
 export interface INavBarProps { }
