@@ -9,11 +9,18 @@ const ContactView: React.FC<IContactViewProps> = (props) => {
         <>
             <div id="contact" className="hero-image row min-vh-100 d-flex justify-content-center align-items-center">
                 <div className="col-md-12">
+                    <Slide left>
+                        <div className=" display-1 row d-flex justify-content-center align-items-center text-accent">
+                            <h3 className="font-weight-lighter font-italic">
+                                Drop me a line ...
+                            </h3>
+                        </div>
+                    </Slide>
                     <div className="row d-flex justify-content-center align-items-center">
                         <Slide right>
                             <EmailButton>
                                 <div className="col-md-12">
-                                        <p className="animated-word">EMAIL</p>
+                                    <a target="_blank" href="mailto:pjpavo@gmail.com" className="animated-word" style={{ textDecoration: "none" }} >EMAIL</a>
                                 </div>
                             </EmailButton>
                         </Slide>
