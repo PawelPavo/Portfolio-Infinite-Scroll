@@ -1,16 +1,15 @@
 import * as React from 'react';
 import { AiFillLinkedin } from 'react-icons/ai';
 import { FiMail, FiGithub } from 'react-icons/fi';
-import { useSpring, animated } from 'react-spring'
 import styled from 'styled-components';
 const Flip = require('react-reveal/Flip')
 
 
 
 const NavBar: React.FC<INavBarProps> = (props) => {
-    const myArray = ["你好世界", "Hallo wereld", "Bonjour monde", "Hallo Welt", "γειά σου κόσμος", "Ciao mondo", "こんにちは世界", "여보세요 세계", "Olá mundo", "Здравствуй, мир", "Hola mundo", "Witaj Swiecie"];
+    const myArray = ["Afrikaans: Hallo", "Albanian: Mirë dita","Amharic: ታዲያስ", "Arabic: مرحبا", "Azerbaijani: Салам", "Basque: Kaixo", "Bengali: নমস্কার", "Bosnian: Zdravo", "Breton: Demat", "Bulgarian: Здравейте","Catalan: Hola", "Chichewa: Moni", "Corsican: Bonghjornu", "Croatian: Bok", "Czech: Ahoj", "Danish: Hej", "Dutch: Hallo", "Espetanto: Saluton", "Estonian: Tere", "Fijian: Bula", "Filipino: Kamusta", "Finnish: Hei or Terve", "French: Bonjour", "Georgian: მიესალმები", "German: Hallo", "Greek: Χαίρε", "Hausa: Hello", "Hawaiian: Aloha", "Hebrew: שלום", "Hindi: नमस्ते", "Hungarian: Sziasztok", "Indonesian: Halo", "Irish: Dia dhuit", "Italian: Ciao", "Japanese: こんにちは", "Kannada: ನಮಸ್ಕಾರ", "Khmer: ជំរាបសួរ", "Korean: 안녕", "Lao: ສະບາຍດີ", "Latin: Salve", "Latvian: Sveiki", "Limburgish: Hallau", "Lithuanian: Sveiki", "Macedonian: Добар ден", "Malaysian: Selamat tengahari", "Maltese: Ħelow", "Chinese: 你好", "Maori: Kia ora", "Nepali: नमस्ते", "Norwegian: Hei", "Odia: ନମସ୍କାର", "Pashto: سلام", "Polish: Cześć", "Portugese: Olá", "Romanian: Buna", "Russian: Привет", "Samoan: Talofa", "Serbian: Здраво", "Shanghainese: 侬好", "Shona: Mhoro", "Slovak: Ahoj", "Slovenian: Zdravo", "Spanish: Hola", "Swabian: Grüss Gott", "Swahili: Hodi", "Swedish: Hej", "Tamil: வனக்கம்", "Vietnamese: Xin chào", "Woiworung: Womenjeka", "Yiddish: שלום", "Tamil: வணக்கம்", "Telugu: నమస్కారం", "Turkish: Merhaba", "Vietnamese: Chào bạn", "Welsh: Helo", "Zulu: Sawubona"];
 
-    const [navText, setNavText] = React.useState<string>('Hello World')
+    const [navText, setNavText] = React.useState<string>('English: Hello')
     const handleClick = (event: any) => {
         const newText = myArray[Math.floor(Math.random() * myArray.length)];
         setNavText(newText)
@@ -20,7 +19,7 @@ const NavBar: React.FC<INavBarProps> = (props) => {
         const interval = setInterval(() => {
             const newText = myArray[Math.floor(Math.random() * myArray.length)];
             setNavText(newText)
-        }, 5000);
+        }, 3000);
         return () => clearInterval(interval);
     }, []);
 

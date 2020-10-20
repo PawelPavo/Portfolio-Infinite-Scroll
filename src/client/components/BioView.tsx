@@ -1,6 +1,10 @@
 import * as React from 'react';
+import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
+import Resume from './Resume';
 const Slide = require('react-reveal/Slide')
+
+
 
 const BioView: React.FC<IBioViewProps> = (props) => {
 
@@ -21,9 +25,16 @@ const BioView: React.FC<IBioViewProps> = (props) => {
                                 <div className="col-md-8 my-auto">
                                     <div className="row">
                                         <div className="col-md-12">
-                                            <h6 className="text-justify p-3 font-weight-light">I am an avid problem solver. I won’t give up until the problem in front of me is solved. I believe this quality is what makes me an excellent software developer. Not only do I want to find answers, but it’s important to me that I get a full understanding of what I am trying to solve. Along with my dedicated work ethic, I am a hardworking individual who brings passion and insight into everything I do. I have proven experience in leading a team and working with them towards finding the best solutions. I am hungry for building and fine-tuning more applications and learning new technologies along the way.</h6>
+                                            <h6 className="text-justify p-3 font-weight-light">Self-motivated Junior Full-Stack Developer with a demonstrated history of working in the digital marketing and advertising industry. Skilled in full-stack application development using ReactJS, JavaScript, TypeScript, NodeJS, Tailwind, CSS and more. Creative and dependable team player with a passion for new technologies and software innovation.</h6>
                                         </div>
                                     </div>
+                                    <Slide bottom>
+                                        <div>
+                                            <a className="btn btn-outline-accent rounded-pill px-3"
+                                                href="https://news-api.s3.us-east-2.amazonaws.com/Pawel+SoftDev+Resume+August+20+AWS.pdf"
+                                                target="_blank">My Resume</a>
+                                        </div>
+                                    </Slide>
                                 </div>
                             </Slide>
                         </div>
@@ -34,12 +45,11 @@ const BioView: React.FC<IBioViewProps> = (props) => {
     )
 }
 
-const MainText = styled.div`  
+const MainText = styled.div`
 
  .back {
     background: rgba(0, 0, 0, 0.2) none;
  }
-
 `
 
 export interface IBioViewProps { }

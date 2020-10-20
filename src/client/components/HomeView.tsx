@@ -17,7 +17,7 @@ const Home: React.FC<IHomeProps> = (props) => {
                                     <div className="main-title back shadow py-5 border border-accent border-left-0 border-right-0">
                                         <span className="thick text-accent">Software Developer</span>
                                         <br />
-                                        <span className="thin">Pawel Jaskolski</span>
+                                        <span className="thin myName">Pawel Jaskolski</span>
                                     </div>
                                 </MainText>
                             </Slide>
@@ -47,18 +47,20 @@ const Home: React.FC<IHomeProps> = (props) => {
     )
 }
 
-const MainText = styled.div`  
+const MainText = styled.div` 
+
+@font-face {
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/142996/Anders.ttf');
+    font-family: test;
+  }
+
+
  .main-title {
     margin-top: 100px;
     padding: 0;
     text-align: center;
     top: 50%;
     left: 50%;
- }
- .thin {
-    font-size: 4.2em;
-    font-weight: 225;
-    color: #fff;
  }
 
 .main-title {
@@ -70,12 +72,24 @@ const MainText = styled.div`
     background: rgba(0, 0, 0, 0.2) none;
  }
 
+ .myName {
+    position: relative;
+    font-size: 4em;
+    text-transform: uppercase;
+    font-family: test;
+    font-weight: 225;
+    color: #fff;
+    z-index: 10;
+  }
+
  @media only screen and (max-width: 600px) {
-    .main-title .thin {
-       font-size: 3em;
+    .main-title .myName {
+       font-size: 2em;
        thick: 2em;
     }
  }
+
+
 `
 
 const Arrow = styled.div`
