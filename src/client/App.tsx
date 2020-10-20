@@ -10,7 +10,6 @@ import NavBar from './components/NavBar';
 import BioView from './components/BioView';
 import Burger from './components/navBarMobile/Burger/Burger';
 import Menu from './components/navBarMobile/Menu/Menu';
-import Resume from './views/Resume';
 
 
 const App = (props: AppProps) => {
