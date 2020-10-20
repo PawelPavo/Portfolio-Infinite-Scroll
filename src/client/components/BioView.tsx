@@ -1,7 +1,6 @@
 import * as React from 'react';
 import { BrowserRouter, Link, Route, Switch } from 'react-router-dom';
 import styled from 'styled-components';
-import Resume from './Resume';
 const Slide = require('react-reveal/Slide')
 
 
